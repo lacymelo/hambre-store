@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="justify">
+  <h1>
+    🤖 Hambre Lojas
+  </h1>
 
-## Getting Started
+  > Seja bem vindo ao repositório de código fonte do Hambre Loja, onde desenvolvemos o projeto Hambre Lojas usando o Next.js 14 aplicando os três pilares do Next.jS 14 🚀.
+</div>
 
-First, run the development server:
+## :rocket: Abordagem dos três pilares
+- [X] Server Components 👉  Para não usar Javascript no lado do cliente.
 
+- [X] Client Components 👉  Enviando somente o javascript necessário para o navegador (cliente).
+- [X] Streaming SSR 👉  Ler/escrever dados de forma parcial + Server-Side Rendering
+
+---
+
+## :eyes: Visite o Designer System do Hambre Lojas
+👉 [Storybook](http://lacymelo.github.io/labex-hambre-ui/?path=/docs/home--documentation)
+
+##  📥 Configurações e instalações
+> Estas são todas as bibliotecas utilizadas neste projeto, verifique cada uma com atenção.
+
+✨ Para criar o projeto execute este comando.
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm create next-app@latest hambre-for-stores
+```
+🛠️ Para manter um padrão de escrita do código, instale a lib `@rocketseat/eslint-config` da rocketseat.
+```bash
+pnpm i @rocketseat/eslint-config -D 
+```
+🛠️ No arquivo `.eslintrc.json` do seu projeto adicione a configuração `@rocketseat/eslint-config/react`, da seguinte forma.
+```bash
+{
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "next/core-web-vitals"
+  ]
+}
+```
+🛠️ Para instalar o designer system do hambre lojas `@labex-hambre-ui`, instale executando o seguinte comando.
+```bash
+pnpm i @labex-hambre-ui/react@latest
+```
+🛠️ Para utilizar ícones no projeto, instale a lib `lucide-react`, executando o seguinte comando.
+```bash
+pnpm i lucide-react
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# :closed_book: License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Released in 2023 :closed_book: License
+Made with love by  Laciene Melo [#lacymelo](https://github.com/lacymelo) 🚀.
+This project is under the [MIT license](./LICENSE).
+Give a ⭐️ if this project helped you!
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
