@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@labex-hambre-ui/react':
-    specifier: ^2.5.0
-    version: 2.5.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.6.0
+    version: 2.6.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
     specifier: ^0.300.0
     version: 0.300.0(react@18.2.0)
@@ -142,8 +142,8 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@labex-hambre-ui/react@2.5.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-fNorEqGyhPU7DnKRN2kJy8pWzdEduIzdVVQnVLUS+zHZMze42l4ohLvKJPPoHs6j5H3hqrW/sdea0z6QILg14w==}
+  /@labex-hambre-ui/react@2.6.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-I/AQAiRsX6g1ulstp69tdI3I0dzNL90JYSfb06gfYuaSjx6ZF7Xt+vi6MPgvons4PvFTVRn7sYBpefqaEz4GZw==}
     dependencies:
       '@radix-ui/react-alert-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)

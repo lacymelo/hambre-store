@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@labex-hambre-ui/react": "^2.5.0",
+    "@labex-hambre-ui/react": "^2.6.0",
     "lucide-react": "^0.300.0",
     "next": "14.0.4",
     "react": "^18",
