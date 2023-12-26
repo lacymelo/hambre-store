@@ -6,7 +6,6 @@ export const ContainerAbout = styled("div", {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'var(--justify)',
-    marginTop: '$2',
     width: '100%',
     gap: "$2",
 })

@@ -45,6 +45,10 @@ pnpm i @labex-hambre-ui/react@latest
 ```bash
 pnpm i lucide-react
 ```
+🛠️ Para trabalhar com formulário e validação de formulário usaremos as libs `react-hook-form` e `zod`, faça a instalação com o seguinte comando.
+```bash
+pnpm i react-hook-form @hookform/resolvers zod
+```
 
 # :closed_book: License
 

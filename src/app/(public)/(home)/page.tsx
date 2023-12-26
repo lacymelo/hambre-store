@@ -1,14 +1,13 @@
-import { ContentBox } from "@/components/content-box/page";
+import { ContentBox } from "@/components/content-box";
 import { Panel, Stand } from "../styles";
 import { Button, Heading, Text } from "@labex-hambre-ui/react";
 import { MoveRight } from "lucide-react";
-import { MessageAbout } from "@/components/message-about/page";
-import { RedirectLink } from "@/components/redirect-link/page";
+import { MessageAbout } from "@/components/message-about";
+import { RedirectLink } from "@/components/redirect-link";
 import Image from "next/image";
-import panelImage from '../../../../public/entrega-casa.png'
+import deliveryDriver from '../../../assets/delivery-driver.png'
 
-
-export default function Home() {
+export default async function Home() {
     return (
         <ContentBox>
             <Stand>
@@ -25,7 +24,7 @@ export default function Home() {
                     size="md"
                 >
                     <Text>
-                        Criar Minha Loja
+                        Criar Loja
                     </Text>
 
                     <MoveRight />
@@ -34,7 +33,7 @@ export default function Home() {
                 <MessageAbout>
                     <Text size="md">Já possui conta?</Text>
 
-                    <RedirectLink>
+                    <RedirectLink path="/signin">
                         Faça Login
                     </RedirectLink>
                 </MessageAbout>
@@ -42,7 +41,7 @@ export default function Home() {
 
             <Panel>
                 <Image
-                    src={panelImage}
+                    src={deliveryDriver}
                     height={400}
                     quality={100}
                     priority

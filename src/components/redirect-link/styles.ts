@@ -1,7 +1,7 @@
 'use client'
 import { Text, styled } from "@labex-hambre-ui/react";
 
-export const ContainerLink = styled(Text, {
+export const LinkRedirect = styled('div', {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -9,6 +9,7 @@ export const ContainerLink = styled(Text, {
     cursor: 'pointer',
     color: '$hambre600',
     fontSize: '$sm',
+    textDecoration: 'none',
 
     '&:hover': {
         color: '$hambre300',

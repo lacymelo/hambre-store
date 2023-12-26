@@ -2,10 +2,12 @@
 import { styled } from "@labex-hambre-ui/react";
 
 export const Content = styled("div", {
-    margin: '$20 auto $4',
+    margin: 'auto',
     display: 'grid',
-    gridTemplateColumns: '1fr auto',
+    gridTemplateColumns: '1fr 1fr',
     alignItems: 'center',
+    justifyContent: 'center',
     gap: '$20',
     padding: '$8',
+    maxWidth: '1600px',
 })

@@ -2,9 +2,12 @@
 import { Button, Heading, Text, styled } from "@labex-hambre-ui/react";
 
 export const Stand = styled("div", {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
     maxWidth: 480,
     padding: '0 $10',
     margin: '0, $20',
+    gap: '$4',
 
     [`> ${Heading}`]: {
         fontFamily: 'Patrick Hand',
@@ -17,7 +20,6 @@ export const Stand = styled("div", {
     },
 
     [`> ${Text}`]: {
-        marginTop: '$4',
         color: '$gray500',
         display: 'flex',
         alignItems: 'center',
@@ -25,11 +27,10 @@ export const Stand = styled("div", {
     },
 
     [`> ${Button}`]: {
-        marginTop: '$4',
-        display: 'grid',
         alignItems: 'center',
         justifyContent: 'center',
         gap: '$2',
+        width: 'max-content',
     },
 
     "@media(max-width: 950px)": {
@@ -41,10 +42,25 @@ export const Stand = styled("div", {
 })
 
 export const Panel = styled("div", {
-    paddingRight: '$8',
-    overflow: 'hidden',
+    paddingRight: "$8",
+    overflow: "hidden",
 
     "@media(max-width: 700px)": {
         display: "none",
     },
+});
+
+export const LoadingBox = styled("div", {
+    margin: '$20',
+    maxWidth: '1500px',
+    height: '600px',
+})
+
+export const Grid = styled("div", {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: '1fr 1fr',
+    width: '100%',
+    height: '100%',
+    gap: '$10',
 })
