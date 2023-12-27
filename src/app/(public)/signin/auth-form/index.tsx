@@ -92,10 +92,10 @@ export function AuthForm() {
 
             <MessageAbout variant="center">
                 <Text size="sm">
-                    não possui conta
+                    não possui conta?
                 </Text>
 
-                <RedirectLink path="/">
+                <RedirectLink path="/register-user">
                     Cadastre-se
                 </RedirectLink>
             </MessageAbout>

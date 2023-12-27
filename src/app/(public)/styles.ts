@@ -50,10 +50,13 @@ export const Panel = styled("div", {
     },
 });
 
-export const LoadingBox = styled("div", {
-    margin: '$20',
-    maxWidth: '1500px',
+export const LoadingPublic = styled("div", {
+    margin: 'auto',
+    padding: '0 $10',
+    maxWidth: 1200,
+    width: '100%',
     height: '600px',
+    display: 'flex',
 })
 
 export const Grid = styled("div", {

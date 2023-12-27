@@ -1,9 +1,14 @@
+import { Metadata } from "next";
 import { ContentBox } from "@/components/content-box";
 import { Panel, Stand } from "../styles";
 import { Heading, Text } from "@labex-hambre-ui/react";
 import Image from "next/image";
 import smilingCustomer from "../../../assets/smiling-customer.png"
-import { AuthForm } from "./auth-form/page";
+import { AuthForm } from "./auth-form";
+
+export const metadate: Metadata = {
+    title: 'SignIn'
+}
 
 export default function SignIn() {
     return (

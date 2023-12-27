@@ -6,6 +6,11 @@ import { MessageAbout } from "@/components/message-about";
 import { RedirectLink } from "@/components/redirect-link";
 import Image from "next/image";
 import deliveryDriver from '../../../assets/delivery-driver.png'
+import { Metadata } from "next";
+
+export const metadate: Metadata = {
+    title: 'Home'
+}
 
 export default async function Home() {
     return (
