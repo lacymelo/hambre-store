@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Checkbox, Text, TextInput } from "@labex-hambre-ui/react";
 import { CategoryContainer, CategoryItem, CategoryType } from "./styles";
 import { MoveRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { UserProps } from "../page";
 
 const registerStoreFormSchema = z.object({
     name: z
@@ -26,14 +28,14 @@ const registerStoreFormSchema = z.object({
             message: "Você precisa selecionar pelo menos uma categoria"
         })
         .refine((categories) => categories.length <= 3, {
-            message: "Você pode selecionar no máximo 3 opções"
+            message: "Você só pode selecionar no máximo 3 opções"
         })
 })
 
 type RegisterStoreFormInput = z.input<typeof registerStoreFormSchema>
 type RegisterStoreFormOutput = z.input<typeof registerStoreFormSchema>
 
-export function StoreForm() {
+export function StoreForm({ params }: UserProps) {
     const {
         register,
         handleSubmit,
@@ -62,8 +64,15 @@ export function StoreForm() {
         name: "categories"
     })
 
+    const router = useRouter()
+
+    async function handleRegisterStore(data: RegisterStoreFormOutput) {
+
+        await router.push(`/register-password/${params.userId}`)
+    }
+
     return (
-        <Form as="form">
+        <Form as="form" onSubmit={handleSubmit(handleRegisterStore)}>
             <label>
                 <Text size="sm">Nome do estabelecimento</Text>
 
