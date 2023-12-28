@@ -1,5 +1,6 @@
 import { Heading, MultiStep, Text } from "@labex-hambre-ui/react";
 import { Content, Header } from "../../styles";
+import { StoreForm } from "./store-form";
 
 interface UserProps {
     params: {
@@ -25,6 +26,8 @@ export default function RegisterStore({ params }: UserProps) {
 
                 <MultiStep size={4} currentStep={3} />
             </Header>
+
+            <StoreForm />
         </Content>
     )
 }
