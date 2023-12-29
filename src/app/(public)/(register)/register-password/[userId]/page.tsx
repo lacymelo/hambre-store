@@ -1,6 +1,13 @@
 import { Heading, MultiStep, Text } from "@labex-hambre-ui/react";
 import { Content, Header } from "../../styles";
 import { PasswordForm } from "./password-form";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Senha'
+    }
+}
 
 export default function RegisterPassword() {
     return (

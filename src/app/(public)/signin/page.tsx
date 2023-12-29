@@ -7,7 +7,13 @@ import smilingCustomer from "../../../assets/smiling-customer.png"
 import { AuthForm } from "./auth-form";
 
 export const metadate: Metadata = {
-    title: 'SignIn'
+    title: 'Signin'
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Login'
+    }
 }
 
 export default function SignIn() {

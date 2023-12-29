@@ -7,6 +7,7 @@ import { RedirectLink } from "@/components/redirect-link";
 import Image from "next/image";
 import deliveryDriver from '../../../assets/delivery-driver.png'
 import { Metadata } from "next";
+import { ButtonToRegisterStore } from "./button-to-register-store";
 
 export const metadate: Metadata = {
     title: 'Home'
@@ -23,17 +24,7 @@ export default async function Home() {
                     forma simples e eficiente.
                 </Text>
 
-                <Button
-                    type="button"
-                    variant="primary"
-                    size="md"
-                >
-                    <Text>
-                        Criar Loja
-                    </Text>
-
-                    <MoveRight />
-                </Button>
+                <ButtonToRegisterStore />
 
                 <MessageAbout>
                     <Text size="md">Já possui conta?</Text>

@@ -3,10 +3,17 @@ import { Content, Form, Header } from "../../styles"
 import { MessageAbout } from "@/components/message-about"
 import { RedirectLink } from "@/components/redirect-link"
 import { ButtonToRegisterStore } from "./button-to-register-store"
+import { Metadata } from "next"
 
 interface UserProps {
     params: {
         userId: string
+    }
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Validar Email'
     }
 }
 

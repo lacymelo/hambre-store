@@ -1,10 +1,17 @@
 import { Heading, MultiStep, Text } from "@labex-hambre-ui/react";
 import { Content, Header } from "../../styles";
 import { StoreForm } from "./store-form";
+import { Metadata } from "next";
 
 export interface UserProps {
     params: {
         userId: string
+    }
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Registrar Loja'
     }
 }
 

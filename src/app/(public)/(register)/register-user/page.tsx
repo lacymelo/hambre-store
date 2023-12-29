@@ -1,6 +1,13 @@
 import { Heading, MultiStep, Text } from "@labex-hambre-ui/react";
-import { Content, Form, Header } from "../styles";
+import { Content, Header } from "../styles";
 import { UserForm } from "./user-form";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Registrar Usuário'
+    }
+}
 
 export default function RegisterUser() {
     return (

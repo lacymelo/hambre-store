@@ -5,6 +5,13 @@ import { MoveRight } from "lucide-react";
 import happyWoman from '../../../../assets/happy-woman.png'
 import Image from "next/image";
 import { ButtonToSignin } from "./button-to-signin";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Parabéns'
+    }
+}
 
 export default function Congratulations() {
     return (
