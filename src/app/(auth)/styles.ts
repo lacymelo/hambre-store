@@ -8,19 +8,20 @@ export const AuthContainer = styled("div", {
     maxWidth: '1600px',
     display: 'grid',
     gridTemplateRows: 'min-content max-content',
-    position: 'relative',
+    position: 'relative'
 })
 
 export const AuthBody = styled("div", {
-    display: 'grid',
-    gridTemplateColumns: '1fr 2fr',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: 'flex',
     height: '100vh',
 })
 
 export const Content = styled("div", {
-    marginLeft: 430,
+    marginLeft: 460,
+    padding: '$20 $3',
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
 })
 
 
