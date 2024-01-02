@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
-    "@labex-hambre-ui/react": "^2.6.0",
+    "@labex-hambre-ui/react": "^2.10.0",
     "lucide-react": "^0.300.0",
     "next": "14.0.4",
     "react": "^18",

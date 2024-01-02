@@ -22,8 +22,10 @@ interface SidebarContextType {
     sidebarItems: SidebarItemProps[]
     addToPage: (currentIndex: number) => void,
     addToPageOrderDetails: (currentIndex: number) => void,
+    handlerFilter: (value: string) => void,
     orderCenter: OrderCenterProps[],
     totalPendingOrders: number
+    filter: string
 }
 
 const SidebarContext = createContext({} as SidebarContextType)
@@ -34,6 +36,7 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
     const [itemActiveMenu, setItemActiveMenu] = useState(0)
     const [orderActive, setOrderActive] = useState(0)
     const [totalPendingOrders, setTotalPendingOrders] = useState(0)
+    const [filter, setFilter] = useState('todos')
 
     function addToPage(currentIndex: number) {
         const activeIndex = sidebarItems.findIndex((item, index) => index == currentIndex);
@@ -45,23 +48,22 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
         setOrderActive(activeIndex === -1 ? 0 : activeIndex)
     }
 
+    function handlerFilter(value: string) {
+        if (value === 'todos') {
+            setOrderCenter(ordersCenter)
+        } else {
+            const list = ordersCenter.filter((item) => item.status === value)
+            setOrderCenter(list)
+        }
+
+        setFilter(value)
+    }
+
     useLayoutEffect(() => {
-        const orders = orderCenter.map((order) => {
-            const match = filters.find((filter) => filter.value === order.status)
-
-            if (match) {
-                return { ...order, text: match.text }
-            } else {
-                return order
-            }
-        })
-
         // verifica quantos pedidos estão pendentes
-        const count = orders.filter(item => item.text === 'Confirme o pedido')
+        const count = orderCenter.filter(item => item.text === 'Confirme o pedido')
 
         setTotalPendingOrders(count.length)
-
-        setOrderCenter(orders)
     }, [])
 
     return (
@@ -72,7 +74,9 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
             addToPage,
             addToPageOrderDetails,
             orderCenter,
-            totalPendingOrders
+            totalPendingOrders,
+            handlerFilter,
+            filter
         }}>
             {children}
         </SidebarContext.Provider>

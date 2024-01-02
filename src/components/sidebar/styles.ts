@@ -152,11 +152,7 @@ export const ItemLink = styled(Link, {
     padding: '$2',
     cursor: 'pointer',
     transition: 'all ease .35s',
-
-    "& + &": {
-        paddingTop: '$2',
-        borderTop: '2px solid $colors$hambre300'
-    },
+    borderTop: '2px solid $colors$hambre300',
 
     '&:hover': {
         backgroundColor: '$orange50',

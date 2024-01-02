@@ -36,7 +36,7 @@ export const itemsMenu = [
 
 export const filters = [
     {
-        value: 'Todos',
+        value: 'todos',
         text: "todos",
     },
     {
@@ -44,7 +44,7 @@ export const filters = [
         text: "Confirme o pedido",
     },
     {
-        value: 'Confirmado! Em breve seu pedido sairá para entrega',
+        value: 'Em preparo',
         text: "Em preparo",
     },
     {
@@ -218,26 +218,31 @@ export const ordersCenter = [
     {
         idPedido: "8967",
         nameClient: "Sidney Sage",
-        status: "Aguardando a loja responder..."
+        status: "Aguardando a loja responder...",
+        text: "Confirme o pedido",
     },
     {
         idPedido: "3917",
         nameClient: "Sophia Clark",
-        status: "Confirmado! Em breve seu pedido sairá para entrega"
+        status: "Confirmado! Em breve seu pedido sairá para entrega",
+        text: "Em preparo",
     },
     {
         idPedido: "1927",
         nameClient: "Miguel Ângelo",
-        status: "Enviado"
+        status: "Enviado",
+        text: "Saiu para entrega",
     },
     {
         idPedido: "2227",
         nameClient: "Leonardo Nunes",
-        status: "Entregue"
+        status: "Entregue",
+        text: "Concluído",
     },
     {
         idPedido: "4377",
         nameClient: "Alicia Lima",
-        status: "Cancelado"
+        status: "Cancelado",
+        text: "Cancelado",
     }
 ]

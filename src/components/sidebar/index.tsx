@@ -13,7 +13,9 @@ export function Sidebar() {
         addToPage,
         orderCenter,
         addToPageOrderDetails,
-        totalPendingOrders
+        totalPendingOrders,
+        handlerFilter,
+        filter
     } = useSidebar()
 
     return (
@@ -63,15 +65,17 @@ export function Sidebar() {
                             placeholder="Filtrar por"
                             name="filter"
                             items={filters}
+                            value={filter}
+                            onValueChange={(selectedValue) => handlerFilter(selectedValue)}
                         />
                     </Content>
                 </Header>
 
                 <OrderToday>
                     <HeaderOrderCenter>
-                        <Text>Todos</Text>
+                        <Text>{filter}</Text>
 
-                        <Text as="strong">5</Text>
+                        <Text as="strong">{orderCenter.length}</Text>
                     </HeaderOrderCenter>
 
                     <OrderBox>

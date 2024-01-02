@@ -9,7 +9,7 @@ export const HeaderBox = styled("div", {
     minHeight: '$20',
     top: 0,
     left: 0,
-    zIndex: 100,
+    zIndex: 2,
 })
 
 export const Content = styled("div", {
