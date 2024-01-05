@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
-import { Column } from "../../styles";
-import { Select } from "@labex-hambre-ui/react";
+import { Column, Info, InfoBox } from "../../styles";
+import { Select, Text } from "@labex-hambre-ui/react";
 import { incomePeriod } from "@/utils/data";
 import ReactEcharts from "echarts-for-react";
 
@@ -36,24 +36,58 @@ export function IncomePeriod() {
     }
 
     return (
-        <Column>
-            <Select
-                placeholder="selecione o período"
-                name="filter"
-                items={incomePeriod}
-                value={filter}
-                onValueChange={(selectedValue) => handlerFilter(selectedValue)}
-            />
+        <InfoBox>
+            <Text>
+                Pedidos Concluídos
+            </Text>
 
-            <ReactEcharts
-                option={options}
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '100%',
-                }}
-            />
-        </Column>
+            <Column>
+                <Select
+                    placeholder="selecione o período"
+                    name="filter"
+                    items={incomePeriod}
+                    value={filter}
+                    onValueChange={(selectedValue) => handlerFilter(selectedValue)}
+                />
+
+                <ReactEcharts
+                    option={options}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '100%',
+                    }}
+                />
+            </Column>
+
+            <Info>
+                <Column>
+                    <Text>
+                        Ganho total neste período
+                    </Text>
+
+                    <Text as="strong" size="4xl">
+                        {
+                            (1535).toLocaleString('pt-BR', {
+                                style: 'currency',
+                                currency: 'BRL',
+                                minimumFractionDigits: 0,
+                                maximumFractionDigits: 0
+                            })
+                        }
+                    </Text>
+                </Column>
+
+                <Column>
+                    <Text>
+                        Total de pedidos neste período
+                    </Text>
+                    <Text as="strong" size="4xl">
+                        19
+                    </Text>
+                </Column>
+            </Info>
+        </InfoBox>
     )
 }

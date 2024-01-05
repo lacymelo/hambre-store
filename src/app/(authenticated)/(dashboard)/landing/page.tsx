@@ -69,41 +69,7 @@ export default async function Landing() {
                 </Card>
 
                 <Card>
-                    <InfoBox >
-                        <Text>
-                            Pedidos Concluídos
-                        </Text>
-
-                        <Info>
-                            <Column>
-                                <Text>
-                                    Ganho total neste período
-                                </Text>
-
-                                <Text as="strong" size="4xl">
-                                    {
-                                        (1535).toLocaleString('pt-BR', {
-                                            style: 'currency',
-                                            currency: 'BRL',
-                                            minimumFractionDigits: 0,
-                                            maximumFractionDigits: 0
-                                        })
-                                    }
-                                </Text>
-                            </Column>
-
-                            <Column>
-                                <Text>
-                                    Total de pedidos neste período
-                                </Text>
-                                <Text as="strong" size="4xl">
-                                    19
-                                </Text>
-                            </Column>
-                        </Info>
-
-                        <IncomePeriod />
-                    </InfoBox>
+                    <IncomePeriod />
                 </Card>
             </Content>
         </Page>

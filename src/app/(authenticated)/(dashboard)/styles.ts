@@ -42,5 +42,5 @@ export const Info = styled("div", {
 export const Column = styled("div", {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gap: '$2'
+    gap: '$2',
 })

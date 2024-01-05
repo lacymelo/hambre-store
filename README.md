@@ -64,7 +64,7 @@ pnpm i cypress -D
 
 # :closed_book: License
 
-Released in 2023 :closed_book: License
+Released in 2024 :closed_book: License
 Made with love by  Laciene Melo [#lacymelo](https://github.com/lacymelo) 🚀.
 This project is under the [MIT license](./LICENSE).
 Give a ⭐️ if this project helped you!
