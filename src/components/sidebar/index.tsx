@@ -3,7 +3,7 @@ import { Animation, Aside, Box, Content, Header, HeaderOrderCenter, ItemContent,
 import { Heading, Select, Text } from "@labex-hambre-ui/react";
 import { useSidebar } from "@/contexts/sidebar-context";
 import { filters } from "@/utils/data";
-import { Bell } from "lucide-react";
+import { ConciergeBell } from "lucide-react";
 
 export function Sidebar() {
     const {
@@ -26,7 +26,7 @@ export function Sidebar() {
                         <PageLink href={item.path}
                             key={index}
                             css={{
-                                '--active-color': itemActiveMenu === index ? '$colors$yellow100' : 'transparent'
+                                '--active-color': itemActiveMenu === index ? '$colors$hambre300' : 'transparent'
                             }}
                             onClick={() => addToPage(index)}
                         >
@@ -53,7 +53,7 @@ export function Sidebar() {
                             </Heading>
 
                             <OrderAlert>
-                                <Bell />
+                                <ConciergeBell />
 
                                 <Text as="span">
                                     {totalPendingOrders}
@@ -88,7 +88,8 @@ export function Sidebar() {
                                             href={`/landing`}
                                             css={{
                                                 '--active': index === orderActive && ('$colors$orange50'),
-                                                '--radius': index === orderActive && ('$radii$sm')
+                                                '--radius': index === orderActive && ('$radii$sm'),
+                                                '--border': index === orderActive ? '$colors$hambre300' : '$colors$orange100'
                                             }}
                                             onClick={() => addToPageOrderDetails(index)}
                                         >

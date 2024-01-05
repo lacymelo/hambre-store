@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
-    "@labex-hambre-ui/react": "^2.10.0",
+    "@labex-hambre-ui/react": "^3.0.0",
+    "echarts-for-react": "^3.0.2",
     "lucide-react": "^0.300.0",
     "next": "14.0.4",
     "react": "^18",
@@ -23,6 +24,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cypress": "^13.6.2",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "typescript": "^5"

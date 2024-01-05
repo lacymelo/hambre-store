@@ -20,7 +20,7 @@ export const Aside = styled("aside", {
 export const Menu = styled("div", {
     display: 'flex',
     flexDirection: 'column',
-    backgroundImage: 'linear-gradient(133deg, $colors$yellow300, $colors$orange300)',
+    backgroundImage: 'linear-gradient(133deg, $colors$yellow100, $colors$orange100)',
     padding: '$20 $3',
     gap: '$2',
     width: 80,
@@ -152,10 +152,11 @@ export const ItemLink = styled(Link, {
     padding: '$2',
     cursor: 'pointer',
     transition: 'all ease .35s',
-    borderTop: '2px solid $colors$hambre300',
+    borderTop: '2px solid var(--border)',
 
     '&:hover': {
         backgroundColor: '$orange50',
+        borderTop: '2px solid $colors$hambre300',
     }
 })
 

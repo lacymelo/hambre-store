@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     }
 }
 
-export default function SignIn() {
+export default async function SignIn() {
     return (
         <ContentBox>
             <Stand>

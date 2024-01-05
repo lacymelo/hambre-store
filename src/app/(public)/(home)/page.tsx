@@ -1,7 +1,6 @@
 import { ContentBox } from "@/components/content-box";
 import { Panel, Stand } from "../styles";
-import { Button, Heading, Text } from "@labex-hambre-ui/react";
-import { MoveRight } from "lucide-react";
+import { Heading, Text } from "@labex-hambre-ui/react";
 import { MessageAbout } from "@/components/message-about";
 import { RedirectLink } from "@/components/redirect-link";
 import Image from "next/image";

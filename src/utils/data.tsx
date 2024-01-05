@@ -1,5 +1,5 @@
 'use client'
-import { ConciergeBell, History, Home, LogOut, Settings, UtensilsCrossed } from "lucide-react";
+import { Currency, History, Home, LogOut, Settings, UtensilsCrossed } from "lucide-react";
 
 export const itemsMenu = [
     {
@@ -20,7 +20,7 @@ export const itemsMenu = [
     {
         title: 'Mesas',
         path: '/table-reservation',
-        icon: <ConciergeBell />
+        icon: <Currency />
     },
     {
         title: 'Config.',
@@ -245,4 +245,23 @@ export const ordersCenter = [
         status: "Cancelado",
         text: "Cancelado",
     }
+]
+
+export const incomePeriod = [
+    {
+        value: 'semanal',
+        text: 'Semanal'
+    },
+    {
+        value: 'quinzenal',
+        text: 'Quinzenal'
+    },
+    {
+        value: 'mensal',
+        text: 'Mensal'
+    },
+    {
+        value: 'anual',
+        text: 'Anual'
+    },
 ]

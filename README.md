@@ -49,6 +49,18 @@ pnpm i lucide-react
 ```bash
 pnpm i react-hook-form @hookform/resolvers zod
 ```
+🛠️ Para realizar teste end two end (E2E), instale a biblioteca cypress com o seguinte comando.
+```bash
+pnpm i cypress -D
+```
+🛠️ Para executar o cypress, execute o seguinte comando.
+```bash
+ pnpm cypress open
+```
+🛠️ Para trabalhar com gráficos usaremos a lib `echarts-for-react`, faça a instalação com o seguinte comando.
+```bash
+ pnpm i echarts-for-react
+```
 
 # :closed_book: License
 

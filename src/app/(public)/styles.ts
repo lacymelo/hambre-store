@@ -1,4 +1,5 @@
 'use client'
+import { patrick } from "@/fonts";
 import { Button, Heading, Text, styled } from "@labex-hambre-ui/react";
 
 export const Stand = styled("div", {
@@ -10,7 +11,7 @@ export const Stand = styled("div", {
     gap: '$4',
 
     [`> ${Heading}`]: {
-        fontFamily: 'Patrick Hand',
+        fontFamily: `${patrick.style.fontFamily}`,
         textTransform: 'uppercase',
 
 
