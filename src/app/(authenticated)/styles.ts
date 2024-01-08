@@ -17,6 +17,7 @@ export const Container = styled("div", {
     alignItems: 'center',
     width: '100%',
     gap: '$4',
+    height: 'max-content'
 })
 
 export const AuthBody = styled("div", {

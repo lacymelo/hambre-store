@@ -1,6 +1,13 @@
 import { Heading, Text } from "@labex-hambre-ui/react";
 import { Card, Column, Content, Info, InfoBox, Page } from "../styles";
 import { IncomePeriod } from "./income-period";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: "Início"
+    }
+}
 
 export default async function Landing() {
     return (

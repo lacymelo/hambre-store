@@ -85,7 +85,7 @@ export function Sidebar() {
                                     orderCenter.map((order, index) => (
                                         <ItemLink
                                             key={index}
-                                            href={`/landing`}
+                                            href={`/${order.path}/${order.idPedido}`}
                                             css={{
                                                 '--active': index === orderActive && ('$colors$orange50'),
                                                 '--radius': index === orderActive && ('$radii$sm'),

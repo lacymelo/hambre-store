@@ -1,6 +1,6 @@
 'use client'
 
-import { filters, itemsMenu, ordersCenter } from "@/utils/data"
+import { filters, itemsMenu, ordersCenter, statusPath } from "@/utils/data"
 import { ReactNode, createContext, useContext, useLayoutEffect, useState } from "react"
 
 interface SidebarItemProps {
@@ -14,6 +14,7 @@ interface OrderCenterProps {
     nameClient: string
     status: string
     text?: string
+    path?: string
 }
 
 interface SidebarContextType {
@@ -60,9 +61,23 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
     }
 
     useLayoutEffect(() => {
+        // adiciona o path de redirecionamento da página
+        const orders = orderCenter.map((order) => {
+            const page = statusPath.find((item) => item.status === order.status)
+
+            if (page) {
+                return {
+                    ...order, path: page.path
+                }
+            }
+
+            return order
+        })
+
         // verifica quantos pedidos estão pendentes
         const count = orderCenter.filter(item => item.text === 'Confirme o pedido')
 
+        setOrderCenter(orders)
         setTotalPendingOrders(count.length)
     }, [])
 

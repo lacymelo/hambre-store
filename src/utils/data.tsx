@@ -61,6 +61,34 @@ export const filters = [
     }
 ]
 
+export const statusPath = [
+    {
+        status: 'Aguardando a loja responder...',
+        path: "pending",
+        text: "Confirme o pedido",
+    },
+    {
+        status: 'Confirmado! Em breve seu pedido sairá para entrega',
+        path: "confirmed",
+        text: "Em preparo",
+    },
+    {
+        status: "Enviado",
+        path: "shipped",
+        text: "Saiu para entrega",
+    },
+    {
+        status: "Entregue",
+        path: "delivered",
+        text: "Concluído",
+    },
+    {
+        status: "Cancelado",
+        path: "canceled",
+        text: "Cancelado",
+    }
+]
+
 export const orders = [
     {
         idPedido: "8967",
