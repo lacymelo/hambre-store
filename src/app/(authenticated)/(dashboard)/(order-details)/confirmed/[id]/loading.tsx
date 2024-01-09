@@ -1,14 +1,14 @@
+import { BoxLoading, SimpleGrid } from "@/app/(authenticated)/styles";
 import { Skeleton } from "@/components/skeleton";
-import { BoxLoading, SimpleGrid } from "../../styles";
 
-export default function LandingLoading() {
+export default function ConfirmedLoading() {
     return (
         <BoxLoading>
             <SimpleGrid>
+                <Skeleton sizeColumn={7} sizeRow={2} />
+                <Skeleton sizeColumn={7} sizeRow={2} />
+                <Skeleton sizeColumn={14} sizeRow={4} />
                 <Skeleton sizeColumn={14} sizeRow={1} />
-                <Skeleton sizeColumn={7} sizeRow={2} />
-                <Skeleton sizeColumn={7} sizeRow={2} />
-                <Skeleton sizeColumn={14} sizeRow={5} />
             </SimpleGrid>
         </BoxLoading>
     )

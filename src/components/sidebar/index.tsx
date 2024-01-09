@@ -1,7 +1,7 @@
 'use client'
 import { Animation, Aside, Box, Content, Header, HeaderOrderCenter, ItemContent, ItemLink, List, Menu, OrderAlert, OrderBox, OrderCenter, OrderToday, PageLink, Scroll, Timer } from "./styles";
 import { Heading, Select, Text } from "@labex-hambre-ui/react";
-import { useSidebar } from "@/contexts/sidebar-context";
+import { useOrder } from "@/contexts/order-context";
 import { filters } from "@/utils/data";
 import { ConciergeBell } from "lucide-react";
 
@@ -16,7 +16,7 @@ export function Sidebar() {
         totalPendingOrders,
         handlerFilter,
         filter
-    } = useSidebar()
+    } = useOrder()
 
     return (
         <Aside>

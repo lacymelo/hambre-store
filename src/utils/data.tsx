@@ -108,7 +108,7 @@ export const orders = [
         typePayment: "Dinheiro na entrega",
         deliveryFee: 5,
         discount: 10,
-        orders: [
+        orderList: [
             {
                 price: 30,
                 product: "Pizza 4 queijos",
@@ -140,7 +140,7 @@ export const orders = [
         typePayment: "Cartão na entrega",
         deliveryFee: 5,
         discount: 10,
-        orders: [
+        orderList: [
             {
                 price: 15,
                 product: "Porção de batatas fritas",
@@ -172,7 +172,7 @@ export const orders = [
         typePayment: "Pix",
         deliveryFee: 5,
         discount: 0,
-        orders: [
+        orderList: [
             {
                 price: 15,
                 product: "Porção de batatas fritas",
@@ -199,7 +199,7 @@ export const orders = [
         typePayment: "Cartão na entrega",
         deliveryFee: 5,
         discount: 2,
-        orders: [
+        orderList: [
             {
                 price: 25,
                 product: "Pizza de peru e mussarela",
@@ -226,7 +226,7 @@ export const orders = [
         typePayment: "Cartão na entrega",
         deliveryFee: 5,
         discount: 2,
-        orders: [
+        orderList: [
             {
                 price: 25,
                 product: "Pizza de peru e mussarela",

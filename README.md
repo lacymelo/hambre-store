@@ -61,6 +61,11 @@ pnpm i cypress -D
 ```bash
  pnpm i echarts-for-react
 ```
+🛠️ Para trabalhar com variáveis ambientes instale a
+biblioteca para gerenciar variáveis ambientes
+```bash
+ pnpm add @t3-oss/env-nextjs
+```
 
 # :closed_book: License
 

@@ -12,33 +12,6 @@ interface OrderDetailsProps {
 export default function Confirmed({ params }: OrderDetailsProps) {
     return (
         <Content>
-            <FloatFooter>
-                <ButtonBox>
-                    <Button
-                        size="sm"
-                        variant="icon"
-                    >
-                        <Printer />
-                    </Button>
-
-                    <Group>
-                        <Button
-                            size="sm"
-                            variant="secondary"
-                        >
-                            Rejeitar
-                        </Button>
-
-                        <Button
-                            size="sm"
-                            variant="primary"
-                        >
-                            Confirmar
-                        </Button>
-                    </Group>
-                </ButtonBox>
-            </FloatFooter>
-
             <Card>
                 <InfoBox>
                     <Text>
@@ -184,6 +157,33 @@ export default function Confirmed({ params }: OrderDetailsProps) {
                     </Item>
                 </List>
             </Order>
+
+            <FloatFooter>
+                <ButtonBox>
+                    <Button
+                        size="sm"
+                        variant="icon"
+                    >
+                        <Printer />
+                    </Button>
+
+                    <Group>
+                        <Button
+                            size="sm"
+                            variant="secondary"
+                        >
+                            Rejeitar
+                        </Button>
+
+                        <Button
+                            size="sm"
+                            variant="primary"
+                        >
+                            Confirmar
+                        </Button>
+                    </Group>
+                </ButtonBox>
+            </FloatFooter>
         </Content>
     )
 }

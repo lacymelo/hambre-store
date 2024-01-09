@@ -1,6 +1,7 @@
 'use client'
 
-import { filters, itemsMenu, ordersCenter, statusPath } from "@/utils/data"
+import { OrderType } from "@/data/types/order"
+import { itemsMenu, orders, ordersCenter, statusPath } from "@/utils/data"
 import { ReactNode, createContext, useContext, useLayoutEffect, useState } from "react"
 
 interface SidebarItemProps {
@@ -17,7 +18,7 @@ interface OrderCenterProps {
     path?: string
 }
 
-interface SidebarContextType {
+interface OrderContextType {
     itemActiveMenu: number
     orderActive: number
     sidebarItems: SidebarItemProps[]
@@ -29,9 +30,9 @@ interface SidebarContextType {
     filter: string
 }
 
-const SidebarContext = createContext({} as SidebarContextType)
+const OrderContext = createContext({} as OrderContextType)
 
-export function SidebarProvider({ children }: { children: ReactNode }) {
+export function OrderProvider({ children }: { children: ReactNode }) {
     const [sidebarItems, setSidebarItems] = useState<SidebarItemProps[]>(itemsMenu)
     const [orderCenter, setOrderCenter] = useState<OrderCenterProps[]>(ordersCenter)
     const [itemActiveMenu, setItemActiveMenu] = useState(0)
@@ -82,7 +83,7 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
     }, [])
 
     return (
-        <SidebarContext.Provider value={{
+        <OrderContext.Provider value={{
             itemActiveMenu,
             orderActive,
             sidebarItems,
@@ -94,8 +95,8 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
             filter
         }}>
             {children}
-        </SidebarContext.Provider>
+        </OrderContext.Provider>
     )
 }
 
-export const useSidebar = () => useContext(SidebarContext)
+export const useOrder = () => useContext(OrderContext)

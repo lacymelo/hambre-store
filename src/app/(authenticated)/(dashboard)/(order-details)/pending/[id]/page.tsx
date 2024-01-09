@@ -2,6 +2,8 @@ import { Button, Text } from "@labex-hambre-ui/react";
 import { Column, Content, Message } from "../../../styles";
 import { Printer, X } from "lucide-react";
 import { ButtonBox, FloatFooter, Group, Header, Item, List, Order, Product } from "../../styles";
+import { OrderType } from "@/data/types/order";
+import { api } from "@/data/api";
 
 interface OrderDetailsProps {
     params: {
@@ -9,11 +11,18 @@ interface OrderDetailsProps {
     }
 }
 
-async function getOrder(id: string) {
+async function handlerOrder(id: string): Promise<OrderType> {
+    const response = await api(`/pending/${id}`)
 
+    const order = await response.json()
+
+    return order
 }
 
 export default async function Pending({ params }: OrderDetailsProps) {
+    const { status, orderList } = await handlerOrder(params.id)
+
+
     return (
         <Content>
             <Message>
@@ -22,42 +31,31 @@ export default async function Pending({ params }: OrderDetailsProps) {
 
             <Order>
                 <Header>
-                    <Text>Aguardando a loja responder...</Text>
+                    <Text>{status}</Text>
                 </Header>
 
                 <List>
-                    <Item>
-                        <Product>
-                            <Text> 1 </Text>
+                    {
+                        orderList.map((order, index) => (
+                            <Item key={index}>
+                                <Product>
+                                    <Text>{order.qtd}</Text>
 
-                            <X />
+                                    <X />
 
-                            <Text> Pizza 4 queijos </Text>
-                        </Product>
+                                    <Text> {order.product} </Text>
+                                </Product>
 
-                        <Text> {(30).toLocaleString('pt-BR', {
-                            style: 'currency',
-                            currency: 'BRL',
-                            minimumFractionDigits: 0,
-                            maximumFractionDigits: 0
-                        })} </Text>
-                    </Item>
-                    <Item>
-                        <Product>
-                            <Text> 1 </Text>
+                                <Text> {order.price.toLocaleString('pt-BR', {
+                                    style: 'currency',
+                                    currency: 'BRL',
+                                    minimumFractionDigits: 0,
+                                    maximumFractionDigits: 0
+                                })} </Text>
+                            </Item>
+                        ))
+                    }
 
-                            <X />
-
-                            <Text> Pizza 4 queijos </Text>
-                        </Product>
-
-                        <Text> {(30).toLocaleString('pt-BR', {
-                            style: 'currency',
-                            currency: 'BRL',
-                            minimumFractionDigits: 0,
-                            maximumFractionDigits: 0
-                        })} </Text>
-                    </Item>
                     <Item>
                         <Product>
                             <Text></Text>

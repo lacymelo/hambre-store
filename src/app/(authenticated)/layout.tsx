@@ -1,10 +1,10 @@
+import { OrderProvider } from "@/contexts/order-context"
 import { ReactNode } from "react"
-import { SidebarProvider } from "@/contexts/sidebar-context"
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
     return (
-        <SidebarProvider>
+        <OrderProvider>
             {children}
-        </SidebarProvider>
+        </OrderProvider>
     )
 }
