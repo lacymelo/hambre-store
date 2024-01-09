@@ -18,14 +18,15 @@
           "typePayment": "Dinheiro na entrega",
           "deliveryFee": 5,
           "discount": 10,
+          "paymentAmount": 50,
           "orderList": [
               {
                   "price": 30,
                   "product": "Pizza 4 queijos",
                   "qtd": 1
-              },
-              {
-                  "price": 25,
+                },
+                {
+                    "price": 25,
                   "product": "Pizza de peru e mussarela",
                   "qtd": 1
               }
@@ -50,14 +51,15 @@
           "typePayment": "Cartão na entrega",
           "deliveryFee": 5,
           "discount": 10,
+          "paymentAmount": 25,
           "orderList": [
               {
                   "price": 15,
                   "product": "Porção de batatas fritas",
                   "qtd": 1
-              },
-              {
-                  "price": 25,
+                },
+                {
+                    "price": 25,
                   "product": "Pizza de peru e mussarela",
                   "qtd": 1
               }
@@ -82,14 +84,15 @@
           "typePayment": "Pix",
           "deliveryFee": 5,
           "discount": 0,
+          "paymentAmount": 20,
           "orderList": [
               {
                   "price": 15,
                   "product": "Porção de batatas fritas",
                   "qtd": 1
-              }
-          ],
-          "status": "Enviado"
+                }
+            ],
+            "status": "Enviado"
       },
       {
           "idPedido": "2227",
@@ -109,14 +112,15 @@
           "typePayment": "Cartão na entrega",
           "deliveryFee": 5,
           "discount": 2,
+          "paymentAmount": 28,
           "orderList": [
               {
                   "price": 25,
                   "product": "Pizza de peru e mussarela",
                   "qtd": 1
-              }
-          ],
-          "status": "Entregue"
+                }
+            ],
+            "status": "Entregue"
       },
       {
           "idPedido": "4377",
@@ -136,14 +140,15 @@
           "typePayment": "Cartão na entrega",
           "deliveryFee": 5,
           "discount": 2,
+          "paymentAmount": 43,
           "orderList": [
               {
                   "price": 25,
                   "product": "Pizza de peru e mussarela",
                   "qtd": 10
-              },
-              {
-                  "price": 15,
+                },
+                {
+                    "price": 15,
                   "product": "Porção de batatas fritas",
                   "qtd": 1
               }

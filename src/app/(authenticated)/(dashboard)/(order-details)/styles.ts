@@ -10,7 +10,7 @@ export const Order = styled("div", {
 })
 
 export const Header = styled("div", {
-    background: '$red50',
+    background: 'var(--header-color)',
     borderTopLeftRadius: '$lg',
     borderTopRightRadius: '$lg',
     padding: '$4',

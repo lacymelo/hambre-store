@@ -12,7 +12,11 @@ interface OrderDetailsProps {
 }
 
 async function handlerOrder(id: string): Promise<OrderType> {
-    const response = await api(`/pending/${id}`)
+    const response = await api(`/order-details/${id}`, {
+        next: {
+            revalidate: 5 * 60, // revalida a cada 5 min
+        }
+    })
 
     const order = await response.json()
 
@@ -20,8 +24,7 @@ async function handlerOrder(id: string): Promise<OrderType> {
 }
 
 export default async function Pending({ params }: OrderDetailsProps) {
-    const { status, orderList } = await handlerOrder(params.id)
-
+    const { status, orderList, deliveryFee, discount, typePayment, paymentAmount, changeMoney } = await handlerOrder(params.id)
 
     return (
         <Content>
@@ -30,7 +33,7 @@ export default async function Pending({ params }: OrderDetailsProps) {
             </Message>
 
             <Order>
-                <Header>
+                <Header css={{ "--header-color": '$colors$red50' }}>
                     <Text>{status}</Text>
                 </Header>
 
@@ -62,7 +65,7 @@ export default async function Pending({ params }: OrderDetailsProps) {
                             <Text> Taxa de entrega </Text>
                         </Product>
 
-                        <Text> {(5).toLocaleString('pt-BR', {
+                        <Text> {deliveryFee.toLocaleString('pt-BR', {
                             style: 'currency',
                             currency: 'BRL',
                             minimumFractionDigits: 0,
@@ -76,7 +79,7 @@ export default async function Pending({ params }: OrderDetailsProps) {
                             <Text> Descontos </Text>
                         </Product>
 
-                        <Text> {(-10).toLocaleString('pt-BR', {
+                        <Text> {(-discount).toLocaleString('pt-BR', {
                             style: 'currency',
                             currency: 'BRL',
                             minimumFractionDigits: 0,
@@ -87,17 +90,21 @@ export default async function Pending({ params }: OrderDetailsProps) {
                         <Product>
                             <Text></Text>
                             <Column>
-                                <Text> Cobrar do cliente - Dinheiro na entrega sendo o total </Text>
-                                <Text as="strong"> O entregador deve levar {(10).toLocaleString('pt-BR', {
-                                    style: 'currency',
-                                    currency: 'BRL',
-                                    minimumFractionDigits: 0,
-                                    maximumFractionDigits: 0
-                                })} </Text>
+                                <Text> Cobrar do cliente - {typePayment} sendo o total </Text>
+                                {
+                                    changeMoney > 0 && (
+                                        <Text as="strong"> O entregador deve levar {changeMoney.toLocaleString('pt-BR', {
+                                            style: 'currency',
+                                            currency: 'BRL',
+                                            minimumFractionDigits: 0,
+                                            maximumFractionDigits: 0
+                                        })} </Text>
+                                    )
+                                }
                             </Column>
                         </Product>
 
-                        <Text> {(50).toLocaleString('pt-BR', {
+                        <Text> {paymentAmount.toLocaleString('pt-BR', {
                             style: 'currency',
                             currency: 'BRL',
                             minimumFractionDigits: 0,

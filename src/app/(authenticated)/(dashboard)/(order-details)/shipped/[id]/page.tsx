@@ -1,9 +1,9 @@
 import { Button, Heading, Text } from "@labex-hambre-ui/react";
-import { Card, Column, Content, InfoBox, Message, Page, Row } from "../../../styles";
 import { AlarmClock, CookingPot, PersonStanding, Pin, Printer, X } from "lucide-react";
-import { ButtonBox, FloatFooter, Group, Header, Item, List, Order, Product } from "../../styles";
 import { api } from "@/data/api";
 import { OrderType } from "@/data/types/order";
+import { Card, Column, Content, InfoBox, Row } from "../../../styles";
+import { ButtonBox, FloatFooter, Group, Header, Item, List, Order, Product } from "../../styles";
 
 interface OrderDetailsProps {
     params: {
@@ -23,7 +23,7 @@ async function handlerOrder(id: string): Promise<OrderType> {
     return order
 }
 
-export default async function Confirmed({ params }: OrderDetailsProps) {
+export default async function Shipped({ params }: OrderDetailsProps) {
     const {
         idPedido,
         nameClient,
@@ -112,7 +112,7 @@ export default async function Confirmed({ params }: OrderDetailsProps) {
             </Card>
 
             <Order>
-                <Header css={{ "--header-color": '$colors$yellow50' }}>
+                <Header css={{ "--header-color": '$colors$green50' }}>
                     <Text>{status}</Text>
                 </Header>
 
@@ -202,21 +202,12 @@ export default async function Confirmed({ params }: OrderDetailsProps) {
                         <Printer />
                     </Button>
 
-                    <Group>
-                        <Button
-                            size="sm"
-                            variant="secondary"
-                        >
-                            Rejeitar
-                        </Button>
-
-                        <Button
-                            size="sm"
-                            variant="primary"
-                        >
-                            Despachar
-                        </Button>
-                    </Group>
+                    <Button
+                        size="sm"
+                        variant="primary"
+                    >
+                        Concluído
+                    </Button>
                 </ButtonBox>
             </FloatFooter>
         </Content>

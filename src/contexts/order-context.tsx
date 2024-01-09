@@ -1,7 +1,7 @@
 'use client'
 
 import { OrderType } from "@/data/types/order"
-import { itemsMenu, orders, ordersCenter, statusPath } from "@/utils/data"
+import { itemsMenu, ordersCenter, statusPath } from "@/utils/data"
 import { ReactNode, createContext, useContext, useLayoutEffect, useState } from "react"
 
 interface SidebarItemProps {

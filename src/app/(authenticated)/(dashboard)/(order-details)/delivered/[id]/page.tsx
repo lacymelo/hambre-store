@@ -23,7 +23,7 @@ async function handlerOrder(id: string): Promise<OrderType> {
     return order
 }
 
-export default async function Confirmed({ params }: OrderDetailsProps) {
+export default async function Delivered({ params }: OrderDetailsProps) {
     const {
         idPedido,
         nameClient,
@@ -112,7 +112,7 @@ export default async function Confirmed({ params }: OrderDetailsProps) {
             </Card>
 
             <Order>
-                <Header css={{ "--header-color": '$colors$yellow50' }}>
+                <Header css={{ "--header-color": '$colors$blue50' }}>
                     <Text>{status}</Text>
                 </Header>
 
@@ -201,22 +201,6 @@ export default async function Confirmed({ params }: OrderDetailsProps) {
                     >
                         <Printer />
                     </Button>
-
-                    <Group>
-                        <Button
-                            size="sm"
-                            variant="secondary"
-                        >
-                            Rejeitar
-                        </Button>
-
-                        <Button
-                            size="sm"
-                            variant="primary"
-                        >
-                            Despachar
-                        </Button>
-                    </Group>
                 </ButtonBox>
             </FloatFooter>
         </Content>

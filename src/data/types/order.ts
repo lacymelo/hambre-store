@@ -22,6 +22,7 @@ export interface OrderType {
     typePayment: string
     deliveryFee: number
     discount: number
+    paymentAmount: number
     orderList: Item[]
     status: string
 }

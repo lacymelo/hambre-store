@@ -5,9 +5,10 @@ export default function OrderDetailsLoading() {
     return (
         <BoxLoading>
             <SimpleGrid>
+                <Skeleton sizeColumn={7} sizeRow={2} />
+                <Skeleton sizeColumn={7} sizeRow={2} />
+                <Skeleton sizeColumn={14} sizeRow={4} />
                 <Skeleton sizeColumn={14} sizeRow={1} />
-                <Skeleton sizeColumn={14} sizeRow={6} />
-                <Skeleton sizeColumn={14} sizeRow={9} />
             </SimpleGrid>
         </BoxLoading>
     )
